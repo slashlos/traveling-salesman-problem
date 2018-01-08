@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="13038"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
-        <plugIn identifier="com.apple.MapKitIBPlugin" version="13196"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="13752"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.MapKitIBPlugin" version="13771"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
@@ -656,7 +656,7 @@ CA
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="WindowController" customModule="traveling_salesman_problem" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="MainController" showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="WindowController" customModule="traveling_salesman_problem" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Travaling Salesman Problem" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="196" y="240" width="800" height="600"/>
@@ -712,7 +712,7 @@ CA
                                                             </textFieldCell>
                                                         </textField>
                                                         <segmentedControl verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="A59-fP-I2V">
-                                                            <rect key="frame" x="99" y="-2" width="185" height="24"/>
+                                                            <rect key="frame" x="112" y="-2" width="172" height="24"/>
                                                             <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="Aa7-TN-PNX">
                                                                 <font key="font" metaFont="system"/>
                                                                 <segments>
@@ -747,7 +747,7 @@ CA
                                                             </textFieldCell>
                                                         </textField>
                                                         <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q0k-a8-JxI">
-                                                            <rect key="frame" x="145" y="-2" width="139" height="24"/>
+                                                            <rect key="frame" x="154" y="-2" width="130" height="24"/>
                                                             <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="35Z-WN-4Rc">
                                                                 <font key="font" metaFont="system"/>
                                                                 <segments>
@@ -1044,7 +1044,7 @@ CA
                                         <touchBarItem id="zZd-NB-JrV">
                                             <viewController key="viewController" id="scc-tD-wB1">
                                                 <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-59-lNu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="195" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="199" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="195" id="fBn-9A-g4W"/>
                                                     </constraints>
@@ -1066,7 +1066,7 @@ CA
                                         <touchBarItem id="Y9V-gX-mnl">
                                             <viewController key="viewController" id="dCE-hF-G8S">
                                                 <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mkE-0O-qEo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="156" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="156" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="NU1-uE-5UE">
                                                         <font key="font" metaFont="system"/>
@@ -1085,7 +1085,7 @@ CA
                                         <touchBarItem id="he8-4Q-aNM">
                                             <viewController key="viewController" id="S5j-Ri-cb2">
                                                 <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NRF-w9-gZF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="push" title="Alternative Routes" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="kUZ-eL-8sS">
                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
@@ -1150,7 +1150,7 @@ CA
                                             <rect key="frame" x="8" y="83" width="232" height="44"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MPL-JV-rXe">
-                                                    <rect key="frame" x="-2" y="27" width="97" height="17"/>
+                                                    <rect key="frame" x="-2" y="27" width="98" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Depature Time:" id="tBv-UK-uN8">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1161,7 +1161,7 @@ CA
                                                     <rect key="frame" x="0.0" y="0.0" width="232" height="23"/>
                                                     <subviews>
                                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bFf-1t-ra5">
-                                                            <rect key="frame" x="0.0" y="2" width="87" height="19"/>
+                                                            <rect key="frame" x="0.0" y="2" width="65" height="19"/>
                                                             <buttonCell key="cell" type="roundRect" title="now" bezelStyle="roundedRect" alignment="center" borderStyle="border" inset="2" id="ufo-1g-5Z1">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                 <font key="font" metaFont="cellTitle"/>
@@ -1171,7 +1171,7 @@ CA
                                                             </connections>
                                                         </button>
                                                         <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l3v-cm-rgh">
-                                                            <rect key="frame" x="95" y="0.0" width="140" height="27"/>
+                                                            <rect key="frame" x="73" y="0.0" width="162" height="27"/>
                                                             <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="o9v-kc-6gF">
                                                                 <font key="font" metaFont="system"/>
                                                                 <date key="date" timeIntervalSinceReferenceDate="504921600">
@@ -1212,7 +1212,7 @@ CA
                                             <rect key="frame" x="8" y="58" width="232" height="17"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kbx-wx-rBm">
-                                                    <rect key="frame" x="-2" y="0.0" width="80" height="17"/>
+                                                    <rect key="frame" x="-2" y="0.0" width="81" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Arrival Time:" id="txS-wT-fvV">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1279,8 +1279,8 @@ CA
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-IX-XvI">
-                                                    <rect key="frame" x="207" y="0.0" width="27" height="17"/>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 m" id="rBr-uM-J7K">
+                                                    <rect key="frame" x="194" y="0.0" width="40" height="17"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 feet" id="rBr-uM-J7K">
                                                         <mkDistanceFormatter key="formatter" units="default" unitStyle="default" id="RNW-Xx-yFC"/>
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1361,7 +1361,7 @@ CA
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oFI-Ha-M4p">
-                                                                            <rect key="frame" x="152" y="0.0" width="81" height="17"/>
+                                                                            <rect key="frame" x="151" y="0.0" width="82" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Today, 01:00" id="0MU-7V-qlo">
                                                                                 <dateFormatter key="formatter" dateStyle="short" timeStyle="short" doesRelativeDateFormatting="YES" id="O0h-2X-x5j"/>
                                                                                 <font key="font" metaFont="system"/>
@@ -1399,7 +1399,7 @@ CA
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-5q-tHP">
-                                                                            <rect key="frame" x="150" y="0.0" width="83" height="17"/>
+                                                                            <rect key="frame" x="149" y="0.0" width="84" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Today, 00:00" placeholderString="Today, 00:00" id="V7r-NZ-xHD">
                                                                                 <dateFormatter key="formatter" dateStyle="short" timeStyle="short" doesRelativeDateFormatting="YES" id="PAl-rB-GcI"/>
                                                                                 <font key="font" metaFont="system"/>

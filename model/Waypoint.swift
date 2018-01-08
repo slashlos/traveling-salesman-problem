@@ -9,10 +9,8 @@
 import Foundation
 import MapKit
 
-
-
 /// A Waypoint is used to describe a location on a map
-class Waypoint: NSObject {
+class Waypoint: NSObject,NSCoding {
     
     /// 2D location coordinates of the waypoint
     let location: CLLocationCoordinate2D
@@ -24,6 +22,23 @@ class Waypoint: NSObject {
     }
     init(location: CLLocationCoordinate2D) {
         self.location = location
+    }
+    
+    // MARK: NSCoding
+    init(location: CLLocationCoordinate2D, placemark: MKPlacemark) {
+        self.location = location
+        self.placemark = placemark
+    }
+    
+    required convenience init(coder decoder: NSCoder) {
+        let location = decoder.decodeObject(forKey: "location") as! CLLocationCoordinate2D
+        let placemark = decoder.decodeObject(forKey: "placemark") as! MKPlacemark
+        self.init(location:location, placemark:placemark)
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(self.location, forKey: "location")
+        coder.encode(self.placemark, forKey: "placemark")
     }
 }
 

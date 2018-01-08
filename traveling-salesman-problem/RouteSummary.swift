@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class RouteSummary {
+class RouteSummary: NSObject,NSCoding {
     let routes: [Route]
     lazy var waypoints: [Waypoint] = {
         guard let start = self.routes.first?.source else {
@@ -34,6 +34,30 @@ class RouteSummary {
         self.routes = routes
     }
     
+    // MARK: NSCoding
+    convenience init(routes: [Route], waypoints: [Waypoint], expectedTravelTime: TimeInterval, distance: CLLocationDistance) {
+        self.init(routes: routes)
+        self.waypoints = waypoints
+        self.expectedTravelTime = expectedTravelTime
+        self.distance = distance
+    }
+    
+    required convenience init(coder decoder: NSCoder) {
+        let routes = decoder.decodeObject(forKey: "routes") as! [Route]
+        let waypoints = decoder.decodeObject(forKey: "waypoints") as! [Waypoint]
+        let expectedTravelTime = decoder.decodeObject(forKey: "expectedTravelTime") as! TimeInterval
+        let distance = decoder.decodeObject(forKey: "distance") as! CLLocationDistance
+        self.init(routes: routes, waypoints: waypoints, expectedTravelTime: expectedTravelTime, distance: distance)
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(self.routes, forKey: "routes")
+        coder.encode(self.waypoints, forKey: "waypoints")
+        coder.encode(self.expectedTravelTime, forKey: "expectedTravelTime")
+        coder.encode(self.distance, forKey: "distance")
+    }
+    
+    // MARK: Functions
     func routeSteps(for depatureTime: Date, transferTime: TimeInterval) -> [RouteStep] {
         var nextDepatureTime = depatureTime
         let steps = routes.map { (route) -> RouteStep in

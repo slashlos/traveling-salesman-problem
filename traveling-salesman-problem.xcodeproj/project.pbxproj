@@ -41,6 +41,8 @@
 		C1DDF8541FA296260049455C /* DijkstraAlgorithmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF8531FA296260049455C /* DijkstraAlgorithmTest.swift */; };
 		C1F854771E5B95070069E9A6 /* WaypointManagerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */; };
 		C1F854791E5B95310069E9A6 /* RouteCalculationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */; };
+		D78F7BF21FFEA8510084DB07 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78F7BF11FFEA8500084DB07 /* Document.swift */; };
+		D78F7BF41FFF18D40084DB07 /* traveling-salesman-problem.icns in Resources */ = {isa = PBXBuildFile; fileRef = D78F7BF31FFF18D40084DB07 /* traveling-salesman-problem.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		C1DDF8531FA296260049455C /* DijkstraAlgorithmTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DijkstraAlgorithmTest.swift; sourceTree = "<group>"; };
 		C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointManagerState.swift; sourceTree = "<group>"; };
 		C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculationState.swift; sourceTree = "<group>"; };
+		D78F7BF11FFEA8500084DB07 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		D78F7BF31FFF18D40084DB07 /* traveling-salesman-problem.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "traveling-salesman-problem.icns"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,11 +176,13 @@
 				C1397A611E4923B200906AB2 /* RouteViewController.swift */,
 				C15ED6F41E5265D30016F07E /* RouteSummaryController.swift */,
 				C18ADB6B1E4D1DB000963090 /* WindowController.swift */,
+				D78F7BF11FFEA8500084DB07 /* Document.swift */,
 				C1397A631E4923B200906AB2 /* Assets.xcassets */,
 				C1397A651E4923B200906AB2 /* Main.storyboard */,
 				C1397A681E4923B200906AB2 /* Info.plist */,
 				C1CCE08C1E57348C002F635E /* WaypointCellView.swift */,
 				C15ED6FE1E529D310016F07E /* RouteStepCellView.swift */,
+				D78F7BF31FFF18D40084DB07 /* traveling-salesman-problem.icns */,
 			);
 			path = "traveling-salesman-problem";
 			sourceTree = "<group>";
@@ -314,7 +320,7 @@
 				TargetAttributes = {
 					C1397A5B1E4923B200906AB2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = XKQRPFVM7Z;
+						DevelopmentTeam = VQYGYPHYGE;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -359,6 +365,7 @@
 			files = (
 				C1397A641E4923B200906AB2 /* Assets.xcassets in Resources */,
 				C1397A671E4923B200906AB2 /* Main.storyboard in Resources */,
+				D78F7BF41FFF18D40084DB07 /* traveling-salesman-problem.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +402,7 @@
 				C11867CB1E4BE24C00E6BB43 /* WorkQueue.swift in Sources */,
 				C11867C91E4BD18E00E6BB43 /* WaypointManager.swift in Sources */,
 				C11867CF1E4C012600E6BB43 /* WeightedGraph.swift in Sources */,
+				D78F7BF21FFEA8510084DB07 /* Document.swift in Sources */,
 				C15ED6F51E5265D30016F07E /* RouteSummaryController.swift in Sources */,
 				C18ADB681E4D0D5B00963090 /* Vertex.swift in Sources */,
 				C15ED6FB1E52680D0016F07E /* RouteSummary.swift in Sources */,
@@ -567,7 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XKQRPFVM7Z;
+				DEVELOPMENT_TEAM = VQYGYPHYGE;
 				INFOPLIST_FILE = "traveling-salesman-problem/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problem";
@@ -583,7 +591,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = XKQRPFVM7Z;
+				DEVELOPMENT_TEAM = VQYGYPHYGE;
 				INFOPLIST_FILE = "traveling-salesman-problem/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problem";

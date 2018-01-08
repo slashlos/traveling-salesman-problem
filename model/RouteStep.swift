@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-struct RouteStep {
+class RouteStep: NSObject,NSCoding {
     let route: Route
     let depatureTime: Date
     let arrivalTime: Date
@@ -29,5 +29,17 @@ struct RouteStep {
         self.route = route
         self.depatureTime = depatureTime
         self.arrivalTime = depatureTime.addingTimeInterval(route.expectedTravelTime)
+    }
+
+    // MARK: NSCoding
+    required convenience init(coder decoder: NSCoder) {
+        let route = decoder.decodeObject(forKey: "route") as! Route
+        let depatureTime = decoder.decodeObject(forKey: "depatureTime") as! Date
+        self.init(route: route, depatureTime: depatureTime)
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(self.route, forKey: "route")
+        coder.encode(self.depatureTime, forKey: "depatureTime")
     }
 }

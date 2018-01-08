@@ -17,13 +17,13 @@ enum RouteWeight {
 /// A Route describes a possible path from a `Waypoint` to another `Waypoint`.
 /// It has a weight which is either the distance or the expected travel time between the two `Waypoint`s determined by the weightedBy property.
 /// It can be used as WeightedEdge.
-class Route {
+class Route: NSObject,NSCoding {
     let source: Waypoint
     let destination: Waypoint
     fileprivate let mkRoute: MKRoute
     var weightedBy: RouteWeight
     var weight: Double {
-        switch weightedBy{
+        switch weightedBy {
         case .distance: return mkRoute.distance
         case .time: return mkRoute.expectedTravelTime
         }
@@ -46,7 +46,21 @@ class Route {
     var distance: CLLocationDistance {
         return mkRoute.distance
     }
+    // MARK: NSCoding
+    required convenience init(coder decoder: NSCoder) {
+        let source = decoder.decodeObject(forKey: "source") as! Waypoint
+        let destination = decoder.decodeObject(forKey: "destination") as! Waypoint
+        let mkRoute = decoder.decodeObject(forKey: "mkRoute") as! MKRoute
+        let weightedBy = decoder.decodeObject(forKey: "weightedBy") as! RouteWeight
+        self.init(source: source, destination: destination, mkRoute: mkRoute, weightedBy: weightedBy)
+    }
     
+    func encode(with coder: NSCoder) {
+        coder.encode(self.source, forKey: "source")
+        coder.encode(self.destination, forKey: "destination")
+        coder.encode(self.mkRoute, forKey: "mkRoute")
+        coder.encode(self.weightedBy, forKey: "weightedBy")
+    }
 }
 
 extension Double: EdgeWeight {
@@ -57,18 +71,16 @@ extension Double: EdgeWeight {
 
 
 // MARK: - Equatable
-extension Route : Equatable {
+extension Route {
     static func ==(lhs: Route, rhs: Route) -> Bool {
         return lhs.mkRoute == rhs.mkRoute
     }
     static func !=(lhs: Route, rhs: Route) -> Bool {
         return lhs.mkRoute != rhs.mkRoute
     }
-}
 
 // MARK: - Hashable
-extension Route: Hashable {
-    var hashValue: Int {
+    override var hashValue: Int {
         return mkRoute.hashValue
     }
 }
