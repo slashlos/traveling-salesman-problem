@@ -12,6 +12,16 @@ import AppKit
 let kTitleUtility =		16
 let	kTitleNormal =		22
 
+extension NSAttributedString {
+    class func string(fromAsset: String) -> String {
+        let asset = NSDataAsset.init(name: NSDataAsset.Name(rawValue: fromAsset))
+        let data = NSData.init(data: (asset?.data)!)
+        let text = String.init(data: data as Data, encoding: String.Encoding.utf8)
+        
+        return text!
+    }
+}
+
 class AboutBoxController : NSViewController {
 	
     @IBOutlet var toggleButton: NSButton!
@@ -67,7 +77,8 @@ class AboutBoxController : NSViewController {
             AboutBoxController.creditsState = 0
         }
         //	Setup our credits; if sender is nil, give 'em long history
-        creditsField.string = credits[AboutBoxController.creditsState]
+        let creditsString = NSAttributedString.string(fromAsset: credits[AboutBoxController.creditsState])
+        creditsField.string = creditsString
     }
     
 	@IBAction func cycleCredits(_ sender: Any) {
