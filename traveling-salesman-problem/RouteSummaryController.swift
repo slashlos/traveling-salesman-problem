@@ -41,7 +41,7 @@ class RouteSummaryController: NSViewController, NSTableViewDataSource, NSTableVi
         return formatter
     }()
     
-    private func updateRouteSummary() {
+    func updateRouteSummary() {
         if useCurrentTimeAsDepatureTime {
             depatureTime = Date()
         }

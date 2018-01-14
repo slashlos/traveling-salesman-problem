@@ -41,6 +41,7 @@
 		C1DDF8541FA296260049455C /* DijkstraAlgorithmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DDF8531FA296260049455C /* DijkstraAlgorithmTest.swift */; };
 		C1F854771E5B95070069E9A6 /* WaypointManagerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */; };
 		C1F854791E5B95310069E9A6 /* RouteCalculationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */; };
+		D777EECE20083CB200150543 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777EECD20083CB100150543 /* About.swift */; };
 		D78F7BF21FFEA8510084DB07 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78F7BF11FFEA8500084DB07 /* Document.swift */; };
 		D78F7BF41FFF18D40084DB07 /* traveling-salesman-problem.icns in Resources */ = {isa = PBXBuildFile; fileRef = D78F7BF31FFF18D40084DB07 /* traveling-salesman-problem.icns */; };
 /* End PBXBuildFile section */
@@ -103,6 +104,7 @@
 		C1DDF8531FA296260049455C /* DijkstraAlgorithmTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DijkstraAlgorithmTest.swift; sourceTree = "<group>"; };
 		C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointManagerState.swift; sourceTree = "<group>"; };
 		C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculationState.swift; sourceTree = "<group>"; };
+		D777EECD20083CB100150543 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		D78F7BF11FFEA8500084DB07 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		D78F7BF31FFF18D40084DB07 /* traveling-salesman-problem.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "traveling-salesman-problem.icns"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -176,6 +178,7 @@
 				C1397A611E4923B200906AB2 /* RouteViewController.swift */,
 				C15ED6F41E5265D30016F07E /* RouteSummaryController.swift */,
 				C18ADB6B1E4D1DB000963090 /* WindowController.swift */,
+				D777EECD20083CB100150543 /* About.swift */,
 				D78F7BF11FFEA8500084DB07 /* Document.swift */,
 				C1397A631E4923B200906AB2 /* Assets.xcassets */,
 				C1397A651E4923B200906AB2 /* Main.storyboard */,
@@ -262,6 +265,7 @@
 				C1397A581E4923B200906AB2 /* Sources */,
 				C1397A591E4923B200906AB2 /* Frameworks */,
 				C1397A5A1E4923B200906AB2 /* Resources */,
+				D777EECC20083B8A00150543 /* Version */,
 			);
 			buildRules = (
 			);
@@ -385,6 +389,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D777EECC20083B8A00150543 /* Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Version;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -x\necho \"we are in `pwd`\"\nbuildPlist=\"traveling-salesman-problem/Info.plist\"\ntestsPlist=\"traveling-salesman-problemTests/Info.plist\"\n\necho `wc $buildPlist` > ~/f.f\nbuildMajor=$(/usr/libexec/PlistBuddy -c \"Print CFBuildMajor\" $buildPlist)\nbuildMinor=$(/usr/libexec/PlistBuddy -c \"Print CFBuildMinor\" $buildPlist)\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBuildNumber\" $buildPlist)\nbuildDate=$(date \"+%Y%m%d.%H%M%S\")\n\n# Increment the buildNumber\nbuildNumber=$(($buildNumber + 1))\n\n# Formulate the bundle versions\nbundleVersion=$buildMajor.$buildMinor.$buildNumber\nbundleShortVersion=$buildMajor\n#no minor yet; .$buildMinor\n\n# Set the version numbers in the buildPlist\n/usr/libexec/PlistBuddy -c \"Set :CFBuildNumber $buildNumber\" $buildPlist\n/usr/libexec/PlistBuddy -c \"Set :CFBuildDate $buildDate\" $buildPlist\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bundleVersion\" $buildPlist\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $bundleShortVersion\" $buildPlist\n\n# Propagate to share\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bundleVersion\" $sharePlist\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $bundleShortVersion\" $testsPlist\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C1397A581E4923B200906AB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -410,6 +431,7 @@
 				C1DDF84E1FA214F20049455C /* WeightedGraph-dijkstaAlgorithm.swift in Sources */,
 				C1F854771E5B95070069E9A6 /* WaypointManagerState.swift in Sources */,
 				C1CCE08D1E57348C002F635E /* WaypointCellView.swift in Sources */,
+				D777EECE20083CB200150543 /* About.swift in Sources */,
 				C1397A8C1E4A0CA600906AB2 /* Waypoint.swift in Sources */,
 				C1B7D14C1E51E4C600DBA522 /* MKMapView+extension.swift in Sources */,
 				C11867C71E4BD04600E6BB43 /* Route.swift in Sources */,

@@ -11,6 +11,11 @@ import Cocoa
 class WindowController: NSWindowController, NSSearchFieldDelegate {
     
     @IBOutlet weak var searchField: NSSearchField!
+    override var document: AnyObject? {
+        didSet {
+            Swift.print("doc is now \(String(describing: self.document))")
+        }
+    }
     override func windowDidLoad() {
         super.windowDidLoad()
     }

@@ -26,7 +26,11 @@ class RouteViewController: NSViewController, MKMapViewDelegate, NSTableViewDataS
     @IBOutlet weak var touchbarStatusLabel: NSTextField!
     @IBOutlet weak var progressIndicator: NSProgressIndicator!
     weak var routeSummaryController: RouteSummaryController!
-    
+	fileprivate var doc: Document {
+		get {
+			return self.view.window?.windowController?.document as! Document
+		}
+	}
     
     var clickGestureRecognizer: NSClickGestureRecognizer!
     
@@ -148,6 +152,9 @@ class RouteViewController: NSViewController, MKMapViewDelegate, NSTableViewDataS
         }
         
         waypointTableView.reloadData(forRowIndexes: [rowIndex], columnIndexes: allColumnIndices)
+		
+		// update document
+		doc.updateChangeCount(.changeDone)
     }
     
     func willRemove(waypoint: Waypoint) {

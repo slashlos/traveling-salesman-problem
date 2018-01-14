@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="13752"/>
@@ -25,6 +25,7 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                                <segue destination="oQB-xX-xNV" kind="modal" id="QtY-7T-eZ3"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
@@ -651,12 +652,12 @@ CA
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="traveling_salesman_problem" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="-273"/>
+            <point key="canvasLocation" x="-284" y="-702"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController storyboardIdentifier="MainController" showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="WindowController" customModule="traveling_salesman_problem" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="MainController" id="B8D-0N-5wS" customClass="WindowController" customModule="traveling_salesman_problem" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Travaling Salesman Problem" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="196" y="240" width="800" height="600"/>
@@ -675,7 +676,28 @@ CA
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-157" y="-292"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="XdM-mJ-bHH">
+            <objects>
+                <windowController id="oQB-xX-xNV" sceneMemberID="viewController">
+                    <window key="window" title="About Traveling Salesman Problem" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Gb7-JC-aDx" customClass="NSPanel">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" utility="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="285" height="165"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                        <connections>
+                            <outlet property="delegate" destination="oQB-xX-xNV" id="Hbs-t3-5og"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="rA4-hD-CAc" kind="relationship" relationship="window.shadowedContentViewController" id="BuL-0e-pbK"/>
+                    </connections>
+                </windowController>
+                <customObject id="5Wd-na-iPz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="-1457"/>
         </scene>
         <!--Traveling Salesman Problem-->
         <scene sceneID="hIz-AP-VOD">
@@ -1066,7 +1088,7 @@ CA
                                         <touchBarItem id="Y9V-gX-mnl">
                                             <viewController key="viewController" id="dCE-hF-G8S">
                                                 <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mkE-0O-qEo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="156" height="24"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="NU1-uE-5UE">
                                                         <font key="font" metaFont="system"/>
@@ -1085,7 +1107,7 @@ CA
                                         <touchBarItem id="he8-4Q-aNM">
                                             <viewController key="viewController" id="S5j-Ri-cb2">
                                                 <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NRF-w9-gZF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="162" height="41"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="push" title="Alternative Routes" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="kUZ-eL-8sS">
                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
@@ -1130,7 +1152,7 @@ CA
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="1045"/>
+            <point key="canvasLocation" x="118" y="595"/>
         </scene>
         <!--Route Summary Controller-->
         <scene sceneID="i5Q-UX-CIL">
@@ -1496,5 +1518,138 @@ CA
             </objects>
             <point key="canvasLocation" x="1062" y="1045"/>
         </scene>
+        <!--About Box Controller-->
+        <scene sceneID="bJI-uc-YGG">
+            <objects>
+                <viewController id="rA4-hD-CAc" customClass="AboutBoxController" customModule="traveling_salesman_problem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="cW1-L1-gUJ">
+                        <rect key="frame" x="0.0" y="0.0" width="283" height="240"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button toolTip="version information" translatesAutoresizingMaskIntoConstraints="NO" id="jAF-Av-VMD">
+                                <rect key="frame" x="12" y="115" width="259" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="t7D-gD-Hi8"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="&lt;version&gt;" bezelStyle="shadowlessSquare" alignment="center" controlSize="mini" state="on" imageScaling="proportionallyDown" inset="2" id="hIy-YE-QPp">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="system" size="10"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleVersion:" target="rA4-hD-CAc" id="xJg-aN-ZSC"/>
+                                </connections>
+                            </button>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="ab6-sZ-VfT">
+                                <rect key="frame" x="12" y="84" width="259" height="5"/>
+                            </box>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGy-EZ-n8l">
+                                <rect key="frame" x="62" y="138" width="161" height="20"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="AppName" placeholderString="" id="VCj-dd-SXD">
+                                    <font key="font" size="14" name="Arial-BoldMT"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="cI4-Nq-l6X">
+                                <rect key="frame" x="110" y="168" width="63" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="8gV-NB-99D"/>
+                                    <constraint firstAttribute="width" constant="63" id="Qmi-Cz-n50"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="AppIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="D0d-fs-X2Y">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="toggleContent:" target="rA4-hD-CAc" id="ReE-Dj-oC1"/>
+                                </connections>
+                            </button>
+                            <button toolTip="version information" translatesAutoresizingMaskIntoConstraints="NO" id="yww-n1-HQs">
+                                <rect key="frame" x="12" y="94" width="257" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="Qae-DB-Lw1"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="&lt;copyright&gt;" bezelStyle="shadowlessSquare" alignment="center" controlSize="mini" state="on" imageScaling="proportionallyDown" inset="2" id="Y7m-QY-g5U">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="system" size="10"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cycleCredits:" target="rA4-hD-CAc" id="w9m-e1-J1a"/>
+                                </connections>
+                            </button>
+                            <scrollView hidden="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryZ-2g-UKi">
+                                <rect key="frame" x="12" y="6" width="259" height="75"/>
+                                <clipView key="contentView" id="qID-cS-MYt">
+                                    <rect key="frame" x="1" y="1" width="257" height="73"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView editable="NO" importsGraphics="NO" horizontallyResizable="YES" verticallyResizable="YES" usesFontPanel="YES" usesRuler="YES" linkDetection="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Sbh-sC-O8T">
+                                            <rect key="frame" x="0.0" y="0.0" width="257" height="73"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="257" height="73"/>
+                                            <size key="maxSize" width="678" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Ear-BT-Ud8">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="XVF-uR-Krz">
+                                    <rect key="frame" x="-14" y="1" width="15" height="0.0"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T3C-JH-weF">
+                                <rect key="frame" x="0.0" y="77" width="283" height="164"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cI4-Nq-l6X" firstAttribute="centerX" secondItem="cW1-L1-gUJ" secondAttribute="centerX" id="1rg-Sn-BfI"/>
+                            <constraint firstItem="ab6-sZ-VfT" firstAttribute="leading" secondItem="ryZ-2g-UKi" secondAttribute="leading" id="5Gz-FO-RE6"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="VGy-EZ-n8l" secondAttribute="trailing" constant="62" id="7s0-DJ-URN"/>
+                            <constraint firstItem="T3C-JH-weF" firstAttribute="top" secondItem="cW1-L1-gUJ" secondAttribute="top" constant="-1" id="AlE-YE-Aqi"/>
+                            <constraint firstItem="jAF-Av-VMD" firstAttribute="leading" secondItem="yww-n1-HQs" secondAttribute="leading" id="BLa-xD-Lyd"/>
+                            <constraint firstItem="jAF-Av-VMD" firstAttribute="top" secondItem="VGy-EZ-n8l" secondAttribute="bottom" constant="10" id="BR2-Yt-usx"/>
+                            <constraint firstItem="cI4-Nq-l6X" firstAttribute="top" secondItem="cW1-L1-gUJ" secondAttribute="top" constant="9" id="EUr-WN-w4g"/>
+                            <constraint firstItem="jAF-Av-VMD" firstAttribute="leading" secondItem="cW1-L1-gUJ" secondAttribute="leading" constant="12" id="GPC-gm-X8g"/>
+                            <constraint firstAttribute="bottom" secondItem="T3C-JH-weF" secondAttribute="bottom" constant="77" id="K8V-wK-U6i"/>
+                            <constraint firstAttribute="bottom" secondItem="ryZ-2g-UKi" secondAttribute="bottom" constant="6" id="LIN-Xm-sBv"/>
+                            <constraint firstItem="ryZ-2g-UKi" firstAttribute="top" secondItem="ab6-sZ-VfT" secondAttribute="bottom" constant="5" id="Q9I-H0-viP"/>
+                            <constraint firstItem="jAF-Av-VMD" firstAttribute="centerX" secondItem="cI4-Nq-l6X" secondAttribute="centerX" id="VDr-fX-b6p"/>
+                            <constraint firstItem="T3C-JH-weF" firstAttribute="leading" secondItem="cW1-L1-gUJ" secondAttribute="leading" id="YC4-Xz-0yx"/>
+                            <constraint firstAttribute="trailing" secondItem="yww-n1-HQs" secondAttribute="trailing" constant="14" id="bwd-hF-QTw"/>
+                            <constraint firstItem="jAF-Av-VMD" firstAttribute="trailing" secondItem="ab6-sZ-VfT" secondAttribute="trailing" id="cVe-DI-tbp"/>
+                            <constraint firstAttribute="trailing" secondItem="T3C-JH-weF" secondAttribute="trailing" id="e22-AK-iFV"/>
+                            <constraint firstItem="ab6-sZ-VfT" firstAttribute="trailing" secondItem="ryZ-2g-UKi" secondAttribute="trailing" id="edr-wd-QFm"/>
+                            <constraint firstItem="yww-n1-HQs" firstAttribute="top" secondItem="jAF-Av-VMD" secondAttribute="bottom" constant="9" id="pO7-hP-cdM"/>
+                            <constraint firstItem="yww-n1-HQs" firstAttribute="leading" secondItem="ab6-sZ-VfT" secondAttribute="leading" id="sXp-Fd-OFq"/>
+                            <constraint firstItem="VGy-EZ-n8l" firstAttribute="leading" relation="lessThanOrEqual" secondItem="cW1-L1-gUJ" secondAttribute="leading" constant="64" id="u1C-75-TBp"/>
+                            <constraint firstItem="ab6-sZ-VfT" firstAttribute="top" secondItem="yww-n1-HQs" secondAttribute="bottom" constant="7" id="u8Z-I3-Jyr"/>
+                            <constraint firstItem="VGy-EZ-n8l" firstAttribute="top" secondItem="cI4-Nq-l6X" secondAttribute="bottom" constant="10" id="vBm-Cc-o7H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appNameField" destination="VGy-EZ-n8l" id="7lL-FL-PGn"/>
+                        <outlet property="creditScroll" destination="ryZ-2g-UKi" id="u0V-3p-pk6"/>
+                        <outlet property="creditSeparatorBox" destination="ab6-sZ-VfT" id="zzB-r1-okE"/>
+                        <outlet property="creditsButton" destination="yww-n1-HQs" id="yap-yH-QQR"/>
+                        <outlet property="creditsField" destination="Sbh-sC-O8T" id="6YO-rz-W9C"/>
+                        <outlet property="hideView" destination="T3C-JH-weF" id="BNe-iL-4je"/>
+                        <outlet property="toggleButton" destination="cI4-Nq-l6X" id="fgw-Hf-t0d"/>
+                        <outlet property="versionButton" destination="jAF-Av-VMD" id="iMS-b9-8IS"/>
+                    </connections>
+                </viewController>
+                <customObject id="fIz-mj-FUi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="e8s-EL-Nfl"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="-1463"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="AppIcon" width="128" height="128"/>
+    </resources>
 </document>
