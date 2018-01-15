@@ -2,14 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AppName</key>
+	<string>traveling salesman</string>
+	<key>AppName_DE</key>
+	<string>fahrendes Verkäufer</string>
+	<key>AppName_ES</key>
+	<string>Vendedor viajero</string>
 	<key>CFBuildDate</key>
-	<string>20180114.115421</string>
+	<string>20180114.203411</string>
 	<key>CFBuildMajor</key>
 	<string>1</string>
 	<key>CFBuildMinor</key>
-	<string>0</string>
+	<string>1</string>
 	<key>CFBuildNumber</key>
-	<integer>59</integer>
+	<integer>94</integer>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDocumentTypes</key>
@@ -35,6 +41,10 @@
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>Help</string>
+	<key>CFBundleHelpBookName</key>
+	<string>$(PRODUCT_NAME) Help</string>
 	<key>CFBundleIconFile</key>
 	<string>traveling-salesman-problem</string>
 	<key>CFBundleIdentifier</key>
@@ -48,7 +58,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.59</string>
+	<string>1.1.94</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.travel</string>
 	<key>LSMinimumSystemVersion</key>

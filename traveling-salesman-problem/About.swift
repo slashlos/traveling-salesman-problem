@@ -25,7 +25,8 @@ extension NSAttributedString {
 class AboutBoxController : NSViewController {
 	
     @IBOutlet var toggleButton: NSButton!
-	@IBOutlet var appNameField: NSTextField!
+    @IBOutlet var appNameButton: NSButton!
+    @IBOutlet var appNameField: NSTextField!
     @IBOutlet var creditScroll: NSScrollView!
 	@IBOutlet var creditsField: NSTextView!
     @IBOutlet var creditsButton: NSButton!
@@ -69,6 +70,8 @@ class AboutBoxController : NSViewController {
         }
     }
     
+    static var languageCycle: Int = 0//English, Deustch
+    static let languageSuffix = [ "", "_DE", "_ES"]
     internal func showCredits() {
         let credits = ["README", "History", "LICENSE"];
         
@@ -77,7 +80,10 @@ class AboutBoxController : NSViewController {
             AboutBoxController.creditsState = 0
         }
         //	Setup our credits; if sender is nil, give 'em long history
-        let creditsString = NSAttributedString.string(fromAsset: credits[AboutBoxController.creditsState])
+        let creditsAsset = String.init(format: "%@%@",
+                                       credits[AboutBoxController.creditsState],
+                                       AboutBoxController.languageSuffix[AboutBoxController.languageCycle])
+        let creditsString = NSAttributedString.string(fromAsset: creditsAsset)
         creditsField.string = creditsString
     }
     
@@ -96,6 +102,21 @@ class AboutBoxController : NSViewController {
         {
             showCredits()
         }
+    }
+    
+    @IBAction func cycleLanguage(_ sender: Any) {
+        let infoDictionary = (Bundle.main.infoDictionary)!
+
+        AboutBoxController.languageCycle += 1
+        if AboutBoxController.languageCycle >= AboutBoxController.maxLanguages
+        {
+            AboutBoxController.languageCycle = 0
+        }
+        Swift.print("language: \(AboutBoxController.languageCycle)")
+        let appNameKey = String.init(format: "AppName%@",
+                                     AboutBoxController.languageSuffix[AboutBoxController.languageCycle])
+        appName = infoDictionary[appNameKey] as? String
+        appNameButton.title = appName!
     }
     
     @IBAction func toggleVersion(_ sender: Any) {
@@ -124,22 +145,22 @@ class AboutBoxController : NSViewController {
     static var versionState: Int = 0
     static var creditsState: Int = 0
     static let maxStates: Int = 3
-    static let creditsCount: Int = 2// CDS, JG, ...
+    static let creditsCount: Int = 2// DD, CDS ...
+    static let maxLanguages: Int = 3
 
     override func viewWillAppear() {
-        let theWindow = appNameField.window
+        let theWindow = appNameButton.window
 
         //	We no need no sticking title!
         theWindow?.title = ""
 
-        appNameField.stringValue = appName!
+        appNameButton.title = appName!
         versionButton.title = versionData!
         creditsButton.title = copyrightStrings![AboutBoxController.creditsState % AboutBoxController.creditsCount]
 
-        if (appNameField.window?.isVisible)! {
+        if (appNameButton.window?.isVisible)! {
             creditsField.scroll(NSMakePoint( 0, 0 ))
         }
-        
         // Version criteria to cycle thru
         AboutBoxController.versionState = -1
         toggleVersion(self)
@@ -156,7 +177,8 @@ class AboutBoxController : NSViewController {
         theWindow?.center()
 
         //	Show the window
-        appNameField.window?.makeKeyAndOrderFront(self)
+        appNameButton.window?.makeKeyAndOrderFront(self)
+
     }
     
     override func viewDidLoad() {

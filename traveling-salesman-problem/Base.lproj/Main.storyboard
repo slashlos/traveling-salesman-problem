@@ -1542,13 +1542,26 @@ CA
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="ab6-sZ-VfT">
                                 <rect key="frame" x="12" y="84" width="259" height="5"/>
                             </box>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGy-EZ-n8l">
-                                <rect key="frame" x="62" y="138" width="161" height="20"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gs5-SK-ZaA">
+                                <rect key="frame" x="12" y="132" width="257" height="32"/>
+                                <buttonCell key="cell" type="bevel" title="AppName" bezelStyle="rounded" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="UdW-kP-zUT">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" size="14" name="Arial-BoldMT"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cycleLanguage:" target="rA4-hD-CAc" id="pez-or-6Jv"/>
+                                </connections>
+                            </button>
+                            <textField hidden="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGy-EZ-n8l">
+                                <rect key="frame" x="18" y="138" width="253" height="20"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="AppName" placeholderString="" id="VCj-dd-SXD">
                                     <font key="font" size="14" name="Arial-BoldMT"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="cycleLanguage:" target="rA4-hD-CAc" id="c2G-Xp-smM"/>
+                                </connections>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="cI4-Nq-l6X">
                                 <rect key="frame" x="110" y="168" width="63" height="63"/>
@@ -1609,15 +1622,19 @@ CA
                         </subviews>
                         <constraints>
                             <constraint firstItem="cI4-Nq-l6X" firstAttribute="centerX" secondItem="cW1-L1-gUJ" secondAttribute="centerX" id="1rg-Sn-BfI"/>
+                            <constraint firstItem="Gs5-SK-ZaA" firstAttribute="centerY" secondItem="VGy-EZ-n8l" secondAttribute="centerY" id="392-P0-iwa"/>
                             <constraint firstItem="ab6-sZ-VfT" firstAttribute="leading" secondItem="ryZ-2g-UKi" secondAttribute="leading" id="5Gz-FO-RE6"/>
                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="VGy-EZ-n8l" secondAttribute="trailing" constant="62" id="7s0-DJ-URN"/>
                             <constraint firstItem="T3C-JH-weF" firstAttribute="top" secondItem="cW1-L1-gUJ" secondAttribute="top" constant="-1" id="AlE-YE-Aqi"/>
                             <constraint firstItem="jAF-Av-VMD" firstAttribute="leading" secondItem="yww-n1-HQs" secondAttribute="leading" id="BLa-xD-Lyd"/>
                             <constraint firstItem="jAF-Av-VMD" firstAttribute="top" secondItem="VGy-EZ-n8l" secondAttribute="bottom" constant="10" id="BR2-Yt-usx"/>
                             <constraint firstItem="cI4-Nq-l6X" firstAttribute="top" secondItem="cW1-L1-gUJ" secondAttribute="top" constant="9" id="EUr-WN-w4g"/>
+                            <constraint firstItem="VGy-EZ-n8l" firstAttribute="centerX" secondItem="Gs5-SK-ZaA" secondAttribute="centerX" constant="4" id="FdW-V3-Q2Z"/>
                             <constraint firstItem="jAF-Av-VMD" firstAttribute="leading" secondItem="cW1-L1-gUJ" secondAttribute="leading" constant="12" id="GPC-gm-X8g"/>
+                            <constraint firstItem="VGy-EZ-n8l" firstAttribute="leading" secondItem="cW1-L1-gUJ" secondAttribute="leading" constant="20" symbolic="YES" id="Haw-I8-FMc"/>
                             <constraint firstAttribute="bottom" secondItem="T3C-JH-weF" secondAttribute="bottom" constant="77" id="K8V-wK-U6i"/>
                             <constraint firstAttribute="bottom" secondItem="ryZ-2g-UKi" secondAttribute="bottom" constant="6" id="LIN-Xm-sBv"/>
+                            <constraint firstItem="Gs5-SK-ZaA" firstAttribute="leading" secondItem="jAF-Av-VMD" secondAttribute="leading" id="ONb-gC-z6S"/>
                             <constraint firstItem="ryZ-2g-UKi" firstAttribute="top" secondItem="ab6-sZ-VfT" secondAttribute="bottom" constant="5" id="Q9I-H0-viP"/>
                             <constraint firstItem="jAF-Av-VMD" firstAttribute="centerX" secondItem="cI4-Nq-l6X" secondAttribute="centerX" id="VDr-fX-b6p"/>
                             <constraint firstItem="T3C-JH-weF" firstAttribute="leading" secondItem="cW1-L1-gUJ" secondAttribute="leading" id="YC4-Xz-0yx"/>
@@ -1625,6 +1642,7 @@ CA
                             <constraint firstItem="jAF-Av-VMD" firstAttribute="trailing" secondItem="ab6-sZ-VfT" secondAttribute="trailing" id="cVe-DI-tbp"/>
                             <constraint firstAttribute="trailing" secondItem="T3C-JH-weF" secondAttribute="trailing" id="e22-AK-iFV"/>
                             <constraint firstItem="ab6-sZ-VfT" firstAttribute="trailing" secondItem="ryZ-2g-UKi" secondAttribute="trailing" id="edr-wd-QFm"/>
+                            <constraint firstItem="VGy-EZ-n8l" firstAttribute="trailing" secondItem="yww-n1-HQs" secondAttribute="trailing" id="n50-h5-0Hw"/>
                             <constraint firstItem="yww-n1-HQs" firstAttribute="top" secondItem="jAF-Av-VMD" secondAttribute="bottom" constant="9" id="pO7-hP-cdM"/>
                             <constraint firstItem="yww-n1-HQs" firstAttribute="leading" secondItem="ab6-sZ-VfT" secondAttribute="leading" id="sXp-Fd-OFq"/>
                             <constraint firstItem="VGy-EZ-n8l" firstAttribute="leading" relation="lessThanOrEqual" secondItem="cW1-L1-gUJ" secondAttribute="leading" constant="64" id="u1C-75-TBp"/>
@@ -1633,6 +1651,8 @@ CA
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="appNameButton" destination="Gs5-SK-ZaA" id="Rai-Yd-kEb"/>
+                        <outlet property="appNameButton2" destination="Gs5-SK-ZaA" id="ifA-1R-6jp"/>
                         <outlet property="appNameField" destination="VGy-EZ-n8l" id="7lL-FL-PGn"/>
                         <outlet property="creditScroll" destination="ryZ-2g-UKi" id="u0V-3p-pk6"/>
                         <outlet property="creditSeparatorBox" destination="ab6-sZ-VfT" id="zzB-r1-okE"/>
@@ -1646,7 +1666,7 @@ CA
                 <customObject id="fIz-mj-FUi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="e8s-EL-Nfl"/>
             </objects>
-            <point key="canvasLocation" x="398" y="-1463"/>
+            <point key="canvasLocation" x="397.5" y="-1463"/>
         </scene>
     </scenes>
     <resources>

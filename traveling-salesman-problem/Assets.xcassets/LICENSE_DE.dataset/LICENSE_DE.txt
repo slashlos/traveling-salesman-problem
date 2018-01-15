@@ -1,0 +1,22 @@
+MIT-Lizenz
+
+Copyright (c) 2017 David Nadoba
+Copyright (c) 2018 Carlos David Santiago
+
+Die Erlaubnis wird jeder Person kostenlos erteilt, die eine Kopie erhält
+von dieser Software und zugehörigen Dokumentationsdateien (die "Software"), zu handeln
+in der Software ohne Einschränkung, einschließlich ohne Einschränkung der Rechte
+verwenden, kopieren, ändern, zusammenführen, veröffentlichen, verteilen, unterlizenzieren und / oder verkaufen
+Kopien der Software und Personen, denen die Software gehört
+unter den folgenden Bedingungen eingerichtet:
+
+Der obige Urheberrechtshinweis und dieser Erlaubnishinweis müssen in allen enthalten sein
+Kopien oder wesentliche Teile der Software.
+
+DIE SOFTWARE WIRD OHNE MÄNGELGEWÄHR ZUR VERFÜGUNG GESTELLT, OHNE JEGLICHE GEWÄHRLEISTUNG, AUSDRÜCKLICH ODER
+IMPLIZIT, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF DIE GEWÄHRLEISTUNG DER MARKTGÄNGIGKEIT,
+Eignung für einen bestimmten Zweck und Nichtverletzung. IN KEINEM FALL SIND DIE
+AUTOREN ODER COPYRIGHT-INHABER HAFTEN FÜR ALLE ANSPRÜCHE, SCHÄDEN ODER ANDERE
+HAFTUNG, AUCH IM VERTRAG, VERTRAG ODER ANDERWEITIG,
+AUSSERHALB ODER IN VERBINDUNG MIT DER SOFTWARE ODER DER VERWENDUNG ODER SONSTIGEN HANDLUNGEN IN DER
+SOFTWARE.

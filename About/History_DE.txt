@@ -1,0 +1,24 @@
+Geschichte
+
+Erstellt von David Nadoba:
+
+Implementierung verschiedener Pathfinding-Algorithmen unter Verwendung einer bidirektionalen und gewichteten Graph-Datenstruktur `WeightedGraph`. Sie können eine generische Implementierung einer solchen Graphenstruktur in `WeightedGraph.swift` und den zugehörigen Protokollen finden.
+Dies war meine erste MacOS App und sie verwendet nur Kakaobindungen im `RouteSummaryViewController`.
+
+Ich habe diese App für den [Code Competition "Der Handlungsreisende" (https://www.it-talents.de/foerderung/code-competition/code-competition-02-2017) von [IT-Talents.de] geschrieben ( https://www.it-talents.de/).
+
+Finden Sie das Original unter: https://github.com/dnadoba/traveling-salesman-problem
+
+Geändert von Carlos David Santiago:
+
+Dokumentenunterstützung hinzugefügt, damit verschiedene Szenarien gespeichert und später wieder aufgerufen werden können.
+
+Das Dialogfeld "Info" wurde erweitert
+
+  * README (Deutsch und Englisch)
+  * GESCHICHTE (diese Datei)
+  * LIZENZ (MIT-Lizenz)
+
+Help RTF wurde von readme.md original hinzugefügt.
+
+Finden Sie diese Version unter: https://github.com/slashlos/traveling-salesman-problem

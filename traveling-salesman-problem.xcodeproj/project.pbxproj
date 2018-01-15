@@ -42,6 +42,7 @@
 		C1F854771E5B95070069E9A6 /* WaypointManagerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */; };
 		C1F854791E5B95310069E9A6 /* RouteCalculationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */; };
 		D777EECE20083CB200150543 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = D777EECD20083CB100150543 /* About.swift */; };
+		D777EED0200C369E00150543 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = D777EECF200C369E00150543 /* Help */; };
 		D78F7BF21FFEA8510084DB07 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78F7BF11FFEA8500084DB07 /* Document.swift */; };
 		D78F7BF41FFF18D40084DB07 /* traveling-salesman-problem.icns in Resources */ = {isa = PBXBuildFile; fileRef = D78F7BF31FFF18D40084DB07 /* traveling-salesman-problem.icns */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		C1F854761E5B95070069E9A6 /* WaypointManagerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointManagerState.swift; sourceTree = "<group>"; };
 		C1F854781E5B95310069E9A6 /* RouteCalculationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCalculationState.swift; sourceTree = "<group>"; };
 		D777EECD20083CB100150543 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		D777EECF200C369E00150543 /* Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Help; sourceTree = "<group>"; };
 		D78F7BF11FFEA8500084DB07 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		D78F7BF31FFF18D40084DB07 /* traveling-salesman-problem.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "traveling-salesman-problem.icns"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 		C1397A531E4923B200906AB2 = {
 			isa = PBXGroup;
 			children = (
+				D777EECF200C369E00150543 /* Help */,
 				C1397A5E1E4923B200906AB2 /* traveling-salesman-problem */,
 				C1397A701E4923B200906AB2 /* traveling-salesman-problemTests */,
 				C1397A7B1E4923B200906AB2 /* traveling-salesman-problemUITests */,
@@ -367,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D777EED0200C369E00150543 /* Help in Resources */,
 				C1397A641E4923B200906AB2 /* Assets.xcassets in Resources */,
 				C1397A671E4923B200906AB2 /* Main.storyboard in Resources */,
 				D78F7BF41FFF18D40084DB07 /* traveling-salesman-problem.icns in Resources */,
@@ -600,7 +604,7 @@
 				DEVELOPMENT_TEAM = VQYGYPHYGE;
 				INFOPLIST_FILE = "traveling-salesman-problem/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problem";
+				PRODUCT_BUNDLE_IDENTIFIER = "slashlos.traveling-salesman-problem";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -616,7 +620,7 @@
 				DEVELOPMENT_TEAM = VQYGYPHYGE;
 				INFOPLIST_FILE = "traveling-salesman-problem/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.nadoba.traveling-salesman-problem";
+				PRODUCT_BUNDLE_IDENTIFIER = "slashlos.traveling-salesman-problem";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
