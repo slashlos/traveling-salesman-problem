@@ -9,13 +9,13 @@
 	<key>AppName_ES</key>
 	<string>Vendedor viajero</string>
 	<key>CFBuildDate</key>
-	<string>20180114.203411</string>
+	<string>20180114.213121</string>
 	<key>CFBuildMajor</key>
 	<string>1</string>
 	<key>CFBuildMinor</key>
 	<string>1</string>
 	<key>CFBuildNumber</key>
-	<integer>94</integer>
+	<integer>95</integer>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDocumentTypes</key>
@@ -58,7 +58,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1</string>
 	<key>CFBundleVersion</key>
-	<string>1.1.94</string>
+	<string>1.1.95</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.travel</string>
 	<key>LSMinimumSystemVersion</key>
