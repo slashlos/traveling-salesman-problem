@@ -734,7 +734,7 @@ CA
                                                             </textFieldCell>
                                                         </textField>
                                                         <segmentedControl verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="A59-fP-I2V">
-                                                            <rect key="frame" x="112" y="-2" width="172" height="24"/>
+                                                            <rect key="frame" x="100" y="-2" width="184" height="24"/>
                                                             <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="Aa7-TN-PNX">
                                                                 <font key="font" metaFont="system"/>
                                                                 <segments>
@@ -769,7 +769,7 @@ CA
                                                             </textFieldCell>
                                                         </textField>
                                                         <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q0k-a8-JxI">
-                                                            <rect key="frame" x="154" y="-2" width="130" height="24"/>
+                                                            <rect key="frame" x="147" y="-2" width="137" height="24"/>
                                                             <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="35Z-WN-4Rc">
                                                                 <font key="font" metaFont="system"/>
                                                                 <segments>
@@ -1066,7 +1066,7 @@ CA
                                         <touchBarItem id="zZd-NB-JrV">
                                             <viewController key="viewController" id="scc-tD-wB1">
                                                 <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IBm-59-lNu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="199" height="24"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="199" height="33"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="195" id="fBn-9A-g4W"/>
                                                     </constraints>
@@ -1088,7 +1088,7 @@ CA
                                         <touchBarItem id="Y9V-gX-mnl">
                                             <viewController key="viewController" id="dCE-hF-G8S">
                                                 <segmentedControl key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mkE-0O-qEo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="24"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="NU1-uE-5UE">
                                                         <font key="font" metaFont="system"/>
@@ -1172,7 +1172,7 @@ CA
                                             <rect key="frame" x="8" y="83" width="232" height="44"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MPL-JV-rXe">
-                                                    <rect key="frame" x="-2" y="27" width="98" height="17"/>
+                                                    <rect key="frame" x="-2" y="27" width="97" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Depature Time:" id="tBv-UK-uN8">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1234,7 +1234,7 @@ CA
                                             <rect key="frame" x="8" y="58" width="232" height="17"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kbx-wx-rBm">
-                                                    <rect key="frame" x="-2" y="0.0" width="81" height="17"/>
+                                                    <rect key="frame" x="-2" y="0.0" width="80" height="17"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Arrival Time:" id="txS-wT-fvV">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1383,7 +1383,7 @@ CA
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oFI-Ha-M4p">
-                                                                            <rect key="frame" x="151" y="0.0" width="82" height="17"/>
+                                                                            <rect key="frame" x="152" y="0.0" width="81" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Today, 01:00" id="0MU-7V-qlo">
                                                                                 <dateFormatter key="formatter" dateStyle="short" timeStyle="short" doesRelativeDateFormatting="YES" id="O0h-2X-x5j"/>
                                                                                 <font key="font" metaFont="system"/>
@@ -1421,7 +1421,7 @@ CA
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-5q-tHP">
-                                                                            <rect key="frame" x="149" y="0.0" width="84" height="17"/>
+                                                                            <rect key="frame" x="150" y="0.0" width="83" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Today, 00:00" placeholderString="Today, 00:00" id="V7r-NZ-xHD">
                                                                                 <dateFormatter key="formatter" dateStyle="short" timeStyle="short" doesRelativeDateFormatting="YES" id="PAl-rB-GcI"/>
                                                                                 <font key="font" metaFont="system"/>
@@ -1652,7 +1652,6 @@ CA
                     </view>
                     <connections>
                         <outlet property="appNameButton" destination="Gs5-SK-ZaA" id="Rai-Yd-kEb"/>
-                        <outlet property="appNameButton2" destination="Gs5-SK-ZaA" id="ifA-1R-6jp"/>
                         <outlet property="appNameField" destination="VGy-EZ-n8l" id="7lL-FL-PGn"/>
                         <outlet property="creditScroll" destination="ryZ-2g-UKi" id="u0V-3p-pk6"/>
                         <outlet property="creditSeparatorBox" destination="ab6-sZ-VfT" id="zzB-r1-okE"/>
