@@ -1,21 +1,10 @@
-# macOS App in Swift für den Traveling Salesman 
-## Der Handlungsreisende
-Finde die kürzeste Route und hilf dem Traveling Salesman! 
-Wegfindung auf Basis eines bidirektionalen und gewichtetem Graphen. 
-Lösung für die Code Competition "Der Handlungsreisende" im Februar 2017 von [IT-Talents.de](https://www.it-talents.de/)
+# macOS App in Swift geschrieben, um den kürzesten Weg zu finden
+Implementierung verschiedener Pathfinding-Algorithmen unter Verwendung einer bidirektionalen und gewichteten Graph-Datenstruktur `WeightedGraph`. Sie können eine generische Implementierung einer solchen Graphenstruktur in `WeightedGraph.swift` und den zugehörigen Protokollen finden.
+Dies war meine erste MacOS App und sie verwendet nur Kakaobindungen im `RouteSummaryViewController`.
+Ich habe diese App für den [Code Competition "Der Handlungsreisende" (https://www.it-talents.de/foerderung/code-competition/code-competition-02-2017) von [IT-Talents.de] geschrieben ( https://www.it-talents.de/).
 
-[Download macOS App (Release v1.0)](https://github.com/dnadoba/traveling-salesman-problem/releases/download/v1.0/traveling-salesman-problem.zip)
-![Übersicht](./content/Overview.png)
-#### Detail Ansicht
-![Anzeigen von allen Routen von einem Wegpunkt aus](./content/Detail.png)
-#### Wegpunkte löschbar
-![Wegpunkte löschbar](./content/Delete.jpg)
-#### Alle Fehler werden behandelt
-![Fehler verbessern](./content/Resolve%20Error.png)
-#### Touch Bar Support
-![Touch Bar Support](./content/Touch%20Bar.png)
+[Download der macOS App (Release v1.0)] (https://github.com/dnadoba/traveling-salesman-problem/releases/download/v1.0/traveling-salesman-problem.zip)
 
-#### Video:  
-[https://www.youtube.com/watch?v=2_piE6WCZNk&feature=youtu.be](https://www.youtube.com/watch?v=2_piE6WCZNk&feature=youtu.be)
+In der Hilfe finden Sie einige Screenshots und ein Video, das Ihnen einen schnellen Überblick gibt:
 
-Twitter: @dnadoba
+Twitter: @dnadoba @slashlos

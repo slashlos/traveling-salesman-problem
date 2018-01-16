@@ -52,7 +52,6 @@ class AboutBoxController : NSViewController {
                 window.minSize = NSMakeSize((hideRect?.size.width)!,(hideRect?.size.height)!+CGFloat(kTitleNormal))
                 window.maxSize = window.minSize
                 creditScroll.isHidden = true
-                showCredits()
             }
             else
             {
@@ -67,12 +66,14 @@ class AboutBoxController : NSViewController {
                 window.maxSize = hugeSize
                 creditScroll.isHidden = false
             }
+			showCredits()
         }
     }
     
     static var languageCycle: Int = 0//English, Deustch
     static let languageSuffix = [ "", "_DE", "_ES"]
     internal func showCredits() {
+		
         let credits = ["README", "History", "LICENSE"];
         
         if AboutBoxController.creditsState >= AboutBoxController.maxStates
@@ -105,6 +106,7 @@ class AboutBoxController : NSViewController {
     }
     
     @IBAction func cycleLanguage(_ sender: Any) {
+		
         let infoDictionary = (Bundle.main.infoDictionary)!
 
         AboutBoxController.languageCycle += 1
@@ -117,6 +119,9 @@ class AboutBoxController : NSViewController {
                                      AboutBoxController.languageSuffix[AboutBoxController.languageCycle])
         appName = infoDictionary[appNameKey] as? String
         appNameButton.title = appName!
+		if toggleButton.state == NSControl.StateValue.on {
+			showCredits()
+		}
     }
     
     @IBAction func toggleVersion(_ sender: Any) {
